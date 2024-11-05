@@ -1,0 +1,14 @@
+version: 4.0.80
+steps:
+  - prompt: If a cookie banner appears, click "Ok" or the equivalent button.
+    commands:
+      - command: hover-text
+        text: Ok
+        description: cookie consent button
+        action: click
+  - prompt: >-
+      Assert that the cookie banner disappears.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the cookie banner is not visible
