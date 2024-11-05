@@ -1,0 +1,16 @@
+version: 4.0.80
+steps:
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: >-
+          For Bold Founders Reinventing the Enterprise Stack. is visible on the
+          page
+      - command: assert
+        expect: For Bold Founders Reinventing the Enterprise Stack is visible
+  - prompt: >-
+      Assert that the boldstart logo is visible.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: boldstart is visible on the page
