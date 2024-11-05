@@ -1,0 +1,29 @@
+version: 4.0.80
+steps:
+  - prompt: Scroll to the footer section.
+    commands:
+      - command: scroll-until-text
+        text: >-
+          We use cookies to ensure that we give you the best experience on our
+          website.
+        direction: down
+  - prompt: 'Click on a footer link  # Use the content of the file from the environment'
+    commands:
+      - command: hover-text
+        text: >-
+          We use cookies to ensure that we give you the best experience on our
+          website.
+        description: footer link about cookies
+        action: click
+  - prompt: 'Click on a footer link  # Use the content of the file from the environment'
+    commands:
+      - command: hover-text
+        text: Privacy Policy
+        description: footer link for privacy policy
+        action: click
+  - prompt: 'Click on a footer link  # Use the content of the file from the environment'
+    commands:
+      - command: hover-text
+        text: Ok
+        description: footer link to accept cookies
+        action: click
