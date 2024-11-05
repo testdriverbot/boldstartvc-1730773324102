@@ -1,0 +1,28 @@
+version: 4.0.80
+steps:
+  - prompt: Click on any "Learn More" link within the homepage text.
+    commands:
+      - command: hover-text
+        text: Learn More
+        description: link within the homepage text
+        action: click
+  - prompt: Click on any "Learn More" link within the homepage text.
+    commands:
+      - command: scroll-until-text
+        text: Learn More
+        direction: down
+      - command: hover-text
+        text: Learn More
+        description: link within the homepage text
+        action: click
+  - prompt: Click on any "Learn More" link within the homepage text.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll-until-text
+        text: Learn More
+        direction: down
+      - command: hover-text
+        text: Learn More
+        description: link within the homepage text
+        action: click
