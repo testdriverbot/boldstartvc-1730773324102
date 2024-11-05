@@ -1,0 +1,29 @@
+version: 4.0.80
+steps:
+  - prompt: Click on the main call to action button on the homepage.
+    commands:
+      - command: hover-image
+        description: menu icon in the header
+        action: click
+  - prompt: Click on the main call to action button on the homepage.
+    commands:
+      - command: hover-text
+        text: Enterprise Founder Toolkit
+        description: call to action in the menu
+        action: click
+  - prompt: Assert that an appropriate action or page transition occurs.
+    commands:
+      - command: assert
+        expect: the page contains "Enterprise Founder Toolkit"
+  - prompt: Complete any subsequent prompts or actions.
+    commands:
+      - command: hover-text
+        text: Tools and Templates »
+        description: link to tools and templates section
+        action: click
+  - prompt: >-
+      Assert that a confirmation or success message shows.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the page contains "Tools and Templates"
