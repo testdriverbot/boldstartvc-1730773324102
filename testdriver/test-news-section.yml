@@ -1,0 +1,40 @@
+version: 4.0.80
+steps:
+  - prompt: Scroll to the news or updates section.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Click on a news article or update.
+    commands: []
+  - prompt: Click on a news article or update.
+    commands:
+      - command: hover-text
+        text: >-
+          Web3 security firm Hypernative raises $16 million in Series A funding
+          (The Block) »
+        description: news article link
+        action: click
+  - prompt: >-
+      Assert that the full article or update is displayed.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          Web3 security firm Hypernative raises $16 million in Series A funding
+          (The Block) is displayed
+  - prompt: >-
+      Assert that the full article or update is displayed.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          the full article titled "Web3 security firm Hypernative raises $16
+          million in Series A funding (The Block)" is displayed
+  - prompt: >-
+      Assert that the full article or update is displayed.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          the full article titled "Web3 security firm Hypernative raises $16
+          million in Series A funding (The Block)" is displayed
